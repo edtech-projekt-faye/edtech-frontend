@@ -1,10 +1,11 @@
 
 import './App.css';
+import arrow from './components/arrow';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello</h1>
+      <arrow />
     </div>
   );
 }
