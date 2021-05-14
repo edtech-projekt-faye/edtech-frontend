@@ -1,0 +1,21 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tab-bar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 7px 7px 0 0;
+  margin: 0;
+  padding: 0;
+}
+.tab-bar-text {
+  margin: 0;
+  padding: 0;
+}
+.profile-container {
+  margin: 0 30px;
+}

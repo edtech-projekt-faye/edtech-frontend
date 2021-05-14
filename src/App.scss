@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.App {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .logo {
+        width: 80vw;
+    }
+
+    .subtitle {
+        font-weight: 400;
+        color: white;
+        font-size: 20px;
+    }
+}

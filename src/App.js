@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css';
+import Arrow from './components/arrow';
+import Cards from './components/cards';
 
 function App() {
   const allCoursesArray = []
@@ -25,6 +27,7 @@ function App() {
   // }
   return (
     <div className="App">
+<<<<<<< HEAD
       <input type="search" name="searchInput" id="searchInput" value={searchWord} placeholder="search courses" onChange={(event) => setSearchWord(event.target.value)} />
       {/* {searchWord} */}
       <h1>Hello</h1>
@@ -32,6 +35,10 @@ function App() {
         allCourses &&
         allCourses.map((course, i) => <p key={i}>{course.course_definition}</p>)
       }
+=======
+      <Arrow />
+      <Cards />
+>>>>>>> 78499f6c633412b1b39d602f5fa4cc578b695566
     </div>
   );
 }
