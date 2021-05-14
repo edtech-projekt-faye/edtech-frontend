@@ -1,11 +1,13 @@
 
 import './App.css';
-import arrow from './components/arrow';
+import Arrow from './components/arrow';
+import Cards from './components/cards';
 
 function App() {
   return (
     <div className="App">
-      <arrow />
+      <Arrow />
+      <Cards />
     </div>
   );
 }
