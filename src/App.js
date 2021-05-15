@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 import './App.css';
-import Arrow from './components/arrow';
 import Cards from './components/cards/Cards.jsx';
 import MainContext from './context/MainContext'
 import { Route, Switch } from 'react-router-dom'
 import CourseDetails from './components/CourseDetails'
+import Header from './components/header';
 
 function App() {
 
@@ -40,6 +40,7 @@ function App() {
         <Switch>
           <Route path="/course/:id" render={(props) => <CourseDetails {...props} />} />
         </Switch>
+        <Header />
         <input type="search" name="searchInput" id="searchInput" value={searchWord} placeholder="search courses" onChange={(event) => setSearchWord(event.target.value)} />
         {/* {searchWord} */}
         <h1>Hello</h1>
@@ -47,7 +48,6 @@ function App() {
           allCourses &&
           allCourses.map((course, i) => <p key={i}>{course.course_definition}</p>)
         } */}
-        <Arrow />
         <Cards />
       </MainContext.Provider>
 
