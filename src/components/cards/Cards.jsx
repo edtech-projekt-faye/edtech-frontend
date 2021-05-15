@@ -6,18 +6,18 @@ import './style.css'
 function Cards() {
   const { courses } = useContext(MainContext)
   const history = useHistory()
-  console.log(courses);
+  // console.log(courses);
   return (
     <>
       {
         courses.map((course, i) => {
           return (
             <div key={i} className="card">
-              <a href={`/course/${course._id}`} onClick={() => history.push(`/book/${course._id}`)}>
+              <Link to={`/course/${course._id}`} onClick={() => history.push(`/book/${course._id}`)}>
                 <div className="card__image">
                   <img src="https://images.unsplash.com/photo-1610986603166-f78428624e76?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1480&q=80" alt="" />
                 </div>
-              </a>
+              </Link>
               <div className="card__description">
                 <div className="time">
                   <p>1h 20min</p>

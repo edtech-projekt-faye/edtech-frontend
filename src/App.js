@@ -1,57 +1,62 @@
 import { useEffect, useState } from 'react'
 import './App.css';
-import Arrow from './components/arrow';
-import Cards from './components/cards/Cards.jsx';
+import Home from './components/Home'
 import MainContext from './context/MainContext'
 import { Route, Switch } from 'react-router-dom'
 import CourseDetails from './components/CourseDetails'
 
 function App() {
 
-  const [allCourses, setAllCourses] = useState([])
+  let allCourses = [];
   const [courses, setCourses] = useState([])
   const [searchWord, setSearchWord] = useState('')
-
-  // Object.keys(allCourses).map(key => {
-  //   return allCoursesArray.push(allCourses[key])
-  // })
+  const [detailCourse, setDetailCourse] = useState([])
 
   useEffect(() => {
     fetch('http://localhost:3500/')
       .then(response => response.json())
       .then(items => {
         // console.log(items);
-        setAllCourses(items)
+        Object.keys(items).map(key => {
+          return allCourses.push(items[key])
+        })
+        allCourses.push(items)
+        setCourses(items)
       })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   useEffect(() => {
-    setCourses(allCourses.filter(course => course.course_name.includes(searchWord)))
+    setCourses(courses.filter(course => course.course_name.toLowerCase().includes(searchWord)))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchWord])
-  // const handleSubmit = (event) => {
-  //   setSearchWord(event.target.value)
-  // }
+
+  console.log(allCourses);
   const data = {
     allCourses,
-    courses
+    courses,
+    detailCourse,
+    setDetailCourse,
+    searchWord,
+    setSearchWord
+
   }
   return (
-    <div className="App">
-      <MainContext.Provider value={data}>
+    <MainContext.Provider value={data}>
+      <div className="App">
         <Switch>
+          <Route path="/" exact render={() => <Home />} />
           <Route path="/course/:id" render={(props) => <CourseDetails {...props} />} />
         </Switch>
-        <input type="search" name="searchInput" id="searchInput" value={searchWord} placeholder="search courses" onChange={(event) => setSearchWord(event.target.value)} />
+
         {/* {searchWord} */}
         <h1>Hello</h1>
         {/* {
           allCourses &&
           allCourses.map((course, i) => <p key={i}>{course.course_definition}</p>)
         } */}
-        <Arrow />
-        <Cards />
-      </MainContext.Provider>
 
-    </div>
+      </div>
+    </MainContext.Provider>
   );
 }
 
