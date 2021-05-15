@@ -1,5 +1,4 @@
 
-import Arrow from './arrow/Arrow';
 import Cards from './cards/Cards.jsx';
 import { useContext } from 'react'
 import MainContext from '../context/MainContext'
@@ -11,7 +10,6 @@ const Home = () => {
     <div id="home">
       <Link to="/">Home</Link>
       <input type="search" name="searchInput" id="searchInput" value={searchWord} placeholder="search courses" onChange={(event) => setSearchWord(event.target.value)} />
-      <Arrow />
       <Cards />
     </div>
 
