@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +6,7 @@
 }
 
 .App {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,4 +22,11 @@
   color: white;
   font-size: 20px;
 }
->>>>>>> 78499f6c633412b1b39d602f5fa4cc578b695566
+
+.cards-flex {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}

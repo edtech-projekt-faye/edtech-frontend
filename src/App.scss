@@ -6,7 +6,7 @@
 }
 
 .App {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,4 +21,12 @@
         color: white;
         font-size: 20px;
     }
+}
+
+.cards-flex {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+    flex-wrap: wrap;
 }
