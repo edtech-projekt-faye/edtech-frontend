@@ -4,6 +4,7 @@ import Home from './components/Home'
 import MainContext from './context/MainContext'
 import { Route, Switch } from 'react-router-dom'
 import CourseDetails from './components/CourseDetails'
+import Header from './components/header';
 
 function App() {
 
@@ -43,18 +44,16 @@ function App() {
   return (
     <MainContext.Provider value={data}>
       <div className="App">
+        <Header />
         <Switch>
           <Route path="/" exact render={() => <Home />} />
           <Route path="/course/:id" render={(props) => <CourseDetails {...props} />} />
         </Switch>
 
-        {/* {searchWord} */}
-        <h1>Hello</h1>
         {/* {
           allCourses &&
           allCourses.map((course, i) => <p key={i}>{course.course_definition}</p>)
         } */}
-
       </div>
     </MainContext.Provider>
   );
