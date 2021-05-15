@@ -1,33 +1,48 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { Link, useHistory } from 'react-router-dom'
+import MainContext from '../../context/MainContext'
 import './style.css'
 
 function Cards() {
-    return (
-        <div className="card">
-            <div className="card__image">
-                <img src="https://images.unsplash.com/photo-1610986603166-f78428624e76?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1480&q=80" alt="" />
-            </div>
-            <div className="card__description">
+  const { courses } = useContext(MainContext)
+  const history = useHistory()
+  // console.log(courses);
+  return (
+    <div className="cards-flex">
+      {
+        courses.map((course, i) => {
+          return (
+            <div key={i} className="card">
+              <Link to={`/course/${course._id}`} onClick={() => history.push(`/book/${course._id}`)}>
+                <div className="card__image">
+                  <img src={course.course_img} alt="" />
+                </div>
+              </Link>
+              <div className="card__description">
                 <div className="time">
-                    <p>1h 20min</p>
+                  <p>{course.course_duration}</p>
                 </div>
-                <div className="course-title">
-                    <h2>CSS Basics</h2>
-                </div>
+                <a className="course-title" href={`/course/${course._id}`} onClick={() => history.push(`/book/${course._id}`)}>
+                  <h2>{course.course_name}</h2>
+                </a>
                 <div className="course-intro">
-                    <p>Learn basic styling of HTML elements</p>
+                  <p>{course.course_definition}</p>
                 </div>
-            </div>
-            <div className="course-categories">
+              </div>
+              <div className="course-categories">
                 <div className="course-category">
-                    <p>CSS</p>
+                  <p>CSS</p>
                 </div>
                 <div className="course-category">
-                    <p>HTML</p>
+                  <p>HTML</p>
                 </div>
-            </div>
-        </div>
-    )
+              </div>
+            </div>)
+        })
+      }
+    </div>
+
+  )
 }
 
 export default Cards

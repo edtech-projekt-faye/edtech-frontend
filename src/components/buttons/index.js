@@ -1,9 +1,5 @@
-import './style.css';
+import Buttons from './Buttons.jsx';
 
-const buttons = () => {
-    return (
-        <buttons className="buttons">Get started</buttons>
-    );
-}
+
 
 export default buttons;

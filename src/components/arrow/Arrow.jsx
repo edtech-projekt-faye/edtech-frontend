@@ -2,7 +2,7 @@ import './style.css';
 const Arrow = () => {
     return (
         <div>
-            <h3 className="arrow">Hello Ferdi</h3>
+            <h3 className="arrow">&#60;</h3>
         </div>
     );
 }
