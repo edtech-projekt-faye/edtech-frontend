@@ -49,27 +49,15 @@ function App() {
           <Route path="/" exact render={() => <Home />} />
           <Route path="/course/:id" render={(props) => <CourseDetails {...props} />} />
         </Switch>
-<<<<<<< HEAD
-
-=======
-        <Header />
-      <input type="search" name="searchInput" id="searchInput" value={searchWord} placeholder="search courses" onChange={(event) => setSearchWord(event.target.value)} />
-      {/* {searchWord} */}
-      <h1>Hello</h1>
->>>>>>> 6c0f6001f694adb43cec323bec9e312d2356a290
-      {/* {
+        {/* {searchWord} */}
+        {/* {
           allCourses &&
           allCourses.map((course, i) => <p key={i}>{course.course_definition}</p>)
         } */}
-<<<<<<< HEAD
-      </div >
-    </MainContext.Provider >
-=======
-        <Cards />
-      </MainContext.Provider>
+      </div>
+    </MainContext.Provider>
 
-    </div>
->>>>>>> 6c0f6001f694adb43cec323bec9e312d2356a290
+
   );
 }
 
