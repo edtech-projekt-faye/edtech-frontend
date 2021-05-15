@@ -16,16 +16,25 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  pointer-events: none;
+  position: relative;
+  z-index: 1;
+  transition: .2s;
+}
+
+.card__image img:hover {
+  transform: scale(1.1);
 }
 
 .card__description {
   display: flex;
+  background: white;
   flex-direction: column;
   height: 120px;
   justify-content: center;
   gap: 10px;
-  margin-left: 10px;
+  padding-left: 10px;
+  position: relative;
+  z-index: 2;
 }
 
 .card__description .time {

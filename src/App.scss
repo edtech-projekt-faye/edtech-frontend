@@ -5,22 +5,29 @@
     text-decoration: none;
 }
 
+header {
+    height: 50px;
+    background: #1985A1;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+        height: 100%;
+
+        img {
+            height: 100%;
+        }
+    }
+}
+
 .App {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-
-    .logo {
-        width: 80vw;
-    }
-
-    .subtitle {
-        font-weight: 400;
-        color: white;
-        font-size: 20px;
-    }
 }
 
 .cards-flex {
