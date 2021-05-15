@@ -8,7 +8,7 @@ import Header from './components/header';
 
 function App() {
 
-  let allCourses = [];
+  const [allCourses, setAllCourses] = useState([])
   const [courses, setCourses] = useState([])
   const [searchWord, setSearchWord] = useState('')
   const [detailCourse, setDetailCourse] = useState([])
@@ -18,17 +18,22 @@ function App() {
       .then(response => response.json())
       .then(items => {
         // console.log(items);
-        Object.keys(items).map(key => {
-          return allCourses.push(items[key])
-        })
-        allCourses.push(items)
+        // Object.keys(items).map(key => {
+        //   return allCourses.push(items[key])
+        // })
+        setAllCourses(items)
         setCourses(items)
       })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   useEffect(() => {
-    setCourses(courses.filter(course => course.course_name.toLowerCase().includes(searchWord)))
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    if (searchWord !== '') {
+      setCourses(courses.filter(course => course.course_name.toLowerCase().includes(searchWord)))
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    } else {
+      setCourses(allCourses)
+    }
+
   }, [searchWord])
 
   console.log(allCourses);
@@ -49,27 +54,13 @@ function App() {
           <Route path="/" exact render={() => <Home />} />
           <Route path="/course/:id" render={(props) => <CourseDetails {...props} />} />
         </Switch>
-<<<<<<< HEAD
 
-=======
-        <Header />
-      <input type="search" name="searchInput" id="searchInput" value={searchWord} placeholder="search courses" onChange={(event) => setSearchWord(event.target.value)} />
-      {/* {searchWord} */}
-      <h1>Hello</h1>
->>>>>>> 6c0f6001f694adb43cec323bec9e312d2356a290
-      {/* {
+        {/* {
           allCourses &&
           allCourses.map((course, i) => <p key={i}>{course.course_definition}</p>)
         } */}
-<<<<<<< HEAD
-      </div >
-    </MainContext.Provider >
-=======
-        <Cards />
-      </MainContext.Provider>
-
-    </div>
->>>>>>> 6c0f6001f694adb43cec323bec9e312d2356a290
+      </div>
+    </MainContext.Provider>
   );
 }
 
