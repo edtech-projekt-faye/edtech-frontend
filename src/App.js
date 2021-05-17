@@ -1,10 +1,13 @@
 import { useEffect, useState } from 'react'
 import './App.css';
-import Home from './components/Home'
+import Search from './components/search/Search'
 import MainContext from './context/MainContext'
 import { Route, Switch } from 'react-router-dom'
 import CourseDetails from './components/CourseDetails'
 import Header from './components/header';
+import Courses from './pages/Courses';
+// import { Breakpoint, BreakpointProvider } from 'react-socks'
+import Home from './pages/Home/Home.jsx';
 
 function App() {
 
@@ -14,7 +17,7 @@ function App() {
   const [detailCourse, setDetailCourse] = useState([])
 
   useEffect(() => {
-    fetch('http://localhost:3500/')
+    fetch('http://localhost:3500')
       .then(response => response.json())
       .then(items => {
         // console.log(items);
@@ -33,7 +36,7 @@ function App() {
     } else {
       setCourses(allCourses)
     }
-
+    // eslint-disable-next-line
   }, [searchWord])
 
   console.log(allCourses);
@@ -50,14 +53,14 @@ function App() {
     <MainContext.Provider value={data}>
       <div className="App">
         <Header />
+        {/* <BreakpointProvider>
+          <Courses />
+        </BreakpointProvider> */}
         <Switch>
           <Route path="/" exact render={() => <Home />} />
           <Route path="/course/:id" render={(props) => <CourseDetails {...props} />} />
+          <Route path="/courses" exact render={() => <Courses />} />
         </Switch>
-        {/* {
-          allCourses &&
-          allCourses.map((course, i) => <p key={i}>{course.course_definition}</p>)
-        } */}
       </div>
     </MainContext.Provider>
   );
