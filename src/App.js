@@ -5,6 +5,10 @@ import MainContext from './context/MainContext'
 import { Route, Switch } from 'react-router-dom'
 import CourseDetails from './components/CourseDetails'
 import Header from './components/header';
+import BoardingPages from './boarding/BordingPages';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 
 function App() {
 
@@ -12,6 +16,7 @@ function App() {
   const [courses, setCourses] = useState([])
   const [searchWord, setSearchWord] = useState('')
   const [detailCourse, setDetailCourse] = useState([])
+
 
   useEffect(() => {
     fetch('http://localhost:3500/')
@@ -50,7 +55,9 @@ function App() {
     <MainContext.Provider value={data}>
       <div className="App">
         <Header />
+
         <Switch>
+
           <Route path="/" exact render={() => <Home />} />
           <Route path="/course/:id" render={(props) => <CourseDetails {...props} />} />
         </Switch>
@@ -58,7 +65,9 @@ function App() {
           allCourses &&
           allCourses.map((course, i) => <p key={i}>{course.course_definition}</p>)
         } */}
+
       </div>
+      <BoardingPages />
     </MainContext.Provider>
   );
 }

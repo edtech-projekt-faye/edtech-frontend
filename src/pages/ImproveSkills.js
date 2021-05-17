@@ -1,4 +1,4 @@
-import Buttons from '../components/buttons/Buttons';
+import Buttons from '../components/buttons';
 
 const ImproveSkills = () => {
     return (
