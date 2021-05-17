@@ -1,9 +1,8 @@
-import './style.css';
+import "./style.css";
 
-const Buttons = () => {
+const Button = () => {
     return (
-        <buttons className="buttons">Get started</buttons>
+        <button className="btn general-btn">Continue</button>
     );
 }
-
-export default Buttons;
+export default Button;
