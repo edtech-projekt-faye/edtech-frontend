@@ -5,7 +5,7 @@ import MainContext from './context/MainContext'
 import { Route, Switch } from 'react-router-dom'
 import CourseDetails from './components/CourseDetails'
 import Header from './components/header';
-import BoardingPages from './boarding/BordingPages';
+import BoardingPages from './boarding/BoardingPages';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
