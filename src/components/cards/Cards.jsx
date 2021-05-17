@@ -31,7 +31,7 @@ function Cards() {
               </div>
               <div className="course-categories">
                 <div className="course-category">
-                  <p>CSS</p>
+                  <p>Basics</p>
                 </div>
                 <div className="course-category">
                   <p>HTML</p>
