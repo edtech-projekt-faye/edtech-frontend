@@ -8,6 +8,10 @@ import Header from './components/header';
 import Courses from './pages/Courses';
 // import { Breakpoint, BreakpointProvider } from 'react-socks'
 import Home from './pages/Home/Home.jsx';
+import BoardingPages from './boarding/BordingPages';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 
 function App() {
 
@@ -15,6 +19,7 @@ function App() {
   const [courses, setCourses] = useState([])
   const [searchWord, setSearchWord] = useState('')
   const [detailCourse, setDetailCourse] = useState([])
+
 
   useEffect(() => {
     fetch('http://localhost:3500')
@@ -56,12 +61,20 @@ function App() {
         {/* <BreakpointProvider>
           <Courses />
         </BreakpointProvider> */}
+
         <Switch>
+
           <Route path="/" exact render={() => <Home />} />
           <Route path="/course/:id" render={(props) => <CourseDetails {...props} />} />
           <Route path="/courses" exact render={() => <Courses />} />
         </Switch>
+        {/* {
+          allCourses &&
+          allCourses.map((course, i) => <p key={i}>{course.course_definition}</p>)
+        } */}
+
       </div>
+      <BoardingPages />
     </MainContext.Provider>
   );
 }
