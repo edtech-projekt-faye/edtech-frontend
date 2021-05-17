@@ -2,4 +2,4 @@ import Buttons from './Buttons.jsx';
 
 
 
-export default buttons;
+export default Buttons;
