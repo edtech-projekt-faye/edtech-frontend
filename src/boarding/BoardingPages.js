@@ -54,3 +54,4 @@ export default class PreviousNextMethods extends Component {
         );
     }
 }
+

@@ -8,7 +8,7 @@ import Header from './components/header';
 import Courses from './pages/Courses';
 // import { Breakpoint, BreakpointProvider } from 'react-socks'
 import Home from './pages/Home/Home.jsx';
-import BoardingPages from './boarding/BordingPages';
+import BoardingPages from './boarding/BoardingPages';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
