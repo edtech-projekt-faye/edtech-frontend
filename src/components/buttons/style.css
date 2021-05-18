@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --color-primary: #1985a1;
+  --color-dark: #78746d;
+  --color-light: ##f8f2ee;
+}
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-light);
+}
+.btn {
+  border: none;
+  outline: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn:hover {
+  filter: brightness(85%);
+}
