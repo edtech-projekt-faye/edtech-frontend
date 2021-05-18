@@ -35,9 +35,9 @@ function Header() {
                         </Link>
                     </div>
                     <nav>
-                        <NavLink exact={true} className='link-mobile' activeClassName='active-link' to="/">
+                        <NavLink exact={true} className='link-mobile' activeClassName='active-link' to="/dashboard">
                             <img src="/home-solid.svg" alt="" />
-                            <a className="nav-link">Home</a>
+                            <a className="nav-link">Dashboard</a>
                         </NavLink>
                         <NavLink className='link-mobile' activeClassName='active-link' to="/courses">
                             <img src="/list-ul-solid.svg" alt="" />

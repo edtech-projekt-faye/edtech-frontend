@@ -1,12 +1,12 @@
 import Buttons from '../components/buttons';
+import {Link} from 'react-router-dom'
 
 const ImproveSkills = () => {
     return (
-        <div className="ImproveSkills">
-            <img src="images/ImproveSkills.png" alt="intro" />
-            <h2>Improve your skills</h2>
-            <p>Quarantine is the perfect time to spend your <br></br>day learning something new, from anywhere</p>
-            <Buttons />
+        <div className="slider-page">
+            <img className="slider-img" src="images/ImproveSkills.png" alt="intro" />
+            <h2>Never stop learning!</h2>
+            <Link to="/courses"><button className="get-started">Get started</button></Link>
         </div>
     );
 }

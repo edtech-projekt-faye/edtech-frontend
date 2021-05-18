@@ -6,7 +6,7 @@ import { Route, Switch } from 'react-router-dom'
 import CourseDetails from './components/CourseDetails'
 import Header from './components/header';
 import Courses from './pages/Courses';
-// import { Breakpoint, BreakpointProvider } from 'react-socks'
+import { Breakpoint, BreakpointProvider } from 'react-socks'
 import Home from './pages/Home/Home.jsx';
 import BoardingPages from './boarding/BordingPages';
 import "slick-carousel/slick/slick.css";
@@ -57,24 +57,15 @@ function App() {
   return (
     <MainContext.Provider value={data}>
       <div className="App">
-        <Header />
-        {/* <BreakpointProvider>
-          <Courses />
-        </BreakpointProvider> */}
+        <BreakpointProvider>
+          <Switch>
 
-        <Switch>
-
-          <Route path="/" exact render={() => <Home />} />
-          <Route path="/course/:id" render={(props) => <CourseDetails {...props} />} />
-          <Route path="/courses" exact render={() => <Courses />} />
-        </Switch>
-        {/* {
-          allCourses &&
-          allCourses.map((course, i) => <p key={i}>{course.course_definition}</p>)
-        } */}
-
+            <Route path="/" exact render={() => <Home />} />
+            <Route path="/course/:id" render={(props) => <CourseDetails {...props} />} />
+            <Route path="/courses" exact render={() => <Courses />} />
+          </Switch>
+        </BreakpointProvider>
       </div>
-      <BoardingPages />
     </MainContext.Provider>
   );
 }
