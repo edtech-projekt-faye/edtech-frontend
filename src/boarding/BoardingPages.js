@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
+import { Link } from "react-router-dom"
 import FindCourse from "../pages/FindCourse";
 import LearnAnytime from "../pages/LearnAnytime";
 import ImproveSkills from "../pages/ImproveSkills";
@@ -29,28 +30,29 @@ export default class PreviousNextMethods extends Component {
             slidesToScroll: 1
         };
         return (
-            <div>
-                <Slider ref={c => (this.slider = c)} {...settings}>
-                    <div key={1}>
-                        <LearnAnytime />
-                    </div>
-                    <div key={2}>
-                        <FindCourse />
-                    </div>
-                    <div key={3}>
-                        <ImproveSkills />
-                    </div>
+            <>
+                <div className="slider">
+                    <Slider ref={c => (this.slider = c)} {...settings}>
+                        <div key={1}>
+                            <LearnAnytime />
+                        </div>
+                        <div key={2}>
+                            <FindCourse />
+                        </div>
+                        <div key={3}>
+                            <ImproveSkills />
+                        </div>
 
-                </Slider>
-                <div >
-                    <button className="button" onClick={this.previous}>
-                        Previous
-          </button>
-                    <button className="button" onClick={this.next}>
-                        Next
-          </button>
+                    </Slider>
+                    <br />
+                    <Link to="/courses"><button className="skip">Skip</button></Link>
+                    {/* <div className="slider-buttons">
+                        <button className="button" onClick={this.next}>
+                            Next
+                        </button>
+                    </div> */}
                 </div>
-            </div>
+            </>
         );
     }
 }

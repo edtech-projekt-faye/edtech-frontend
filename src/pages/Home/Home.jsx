@@ -1,15 +1,11 @@
 import React from 'react'
+import BoardingPages from '../../boarding/BordingPages';
 
 function Home() {
     return (
         <div className="home">
-            <h2>
-                Never stop learning
-            </h2>
-            <br />
-            <h3>
-                Free Web Development Courses for Everybody
-            </h3>
+            <img className="logo-home" src="/Logo_breit_W_T.png" alt="Logo"/>
+            <BoardingPages />
         </div>
     )
 }
