@@ -1,16 +1,15 @@
 import { useEffect, useState } from 'react'
 import './App.css';
-import Search from './components/search/Search'
 import MainContext from './context/MainContext'
 import { Route, Switch } from 'react-router-dom'
 import CourseDetails from './components/CourseDetails'
-import Header from './components/header';
 import Courses from './pages/Courses';
 import { Breakpoint, BreakpointProvider } from 'react-socks'
 import Home from './pages/Home/Home.jsx';
 import BoardingPages from './boarding/BordingPages';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Register from './pages/Register'
 
 
 function App() {
@@ -36,7 +35,7 @@ function App() {
   }, [])
   useEffect(() => {
     if (searchWord !== '') {
-      setCourses(courses.filter(course => course.course_name.toLowerCase().includes(searchWord)))
+      setCourses(courses.filter(course => course.course_name.toLowerCase().includes(searchWord.toLowerCase())))
       // eslint-disable-next-line react-hooks/exhaustive-deps
     } else {
       setCourses(allCourses)
@@ -63,6 +62,7 @@ function App() {
             <Route path="/" exact render={() => <Home />} />
             <Route path="/course/:id" render={(props) => <CourseDetails {...props} />} />
             <Route path="/courses" exact render={() => <Courses />} />
+            <Route path="/register" render={() => <Register />} />
           </Switch>
         </BreakpointProvider>
       </div>
