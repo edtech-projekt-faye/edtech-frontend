@@ -14,6 +14,10 @@ function Courses() {
                 <Breakpoint medium down>
                     <Search />
                 </Breakpoint>
+                <div className="courses-title">
+                    <h2>Start learning today!</h2>
+                    <p>Choose one of our free courses and learn web development on the go</p>
+                </div>
                 <div className="courses-overview">
                     <Cards />
                 </div>

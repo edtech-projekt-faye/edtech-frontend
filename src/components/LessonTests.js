@@ -1,6 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react';
 import MainContext from '../context/MainContext'
 import axios from 'axios'
+import Header from './header'
 
 const LessonTests = (props) => {
   const [tests, setTests] = useState([])
@@ -80,7 +81,9 @@ const LessonTests = (props) => {
     }
   };
   return (
-    <div>
+    <div className="quiz">
+      <Header />
+      <br />
       {showScore ? (
         <div className='score-section'>
           You scored {score} out of {questions.length}
@@ -89,7 +92,8 @@ const LessonTests = (props) => {
         <>
           <div className='question-section'>
             <div className='question-count'>
-              <span>Question {currentQuestion + 1}</span>/{questions.length}
+                <h3>Question {currentQuestion + 1}/{questions.length}</h3>
+                <br />
             </div>
             <div className='question-text'>{questions[currentQuestion].questionText}</div>
           </div>

@@ -2,6 +2,7 @@ import { useEffect, useContext } from 'react'
 import axios from 'axios'
 import MainContext from '../context/MainContext'
 import { Link } from 'react-router-dom'
+import Header from './header'
 
 const CourseLessons = (props) => {
   const { match } = props
@@ -16,13 +17,12 @@ const CourseLessons = (props) => {
   }, [])
   console.log(current_course);
   return (
-    <div>
+    <div className="lessons">
+      <Header />
       <h1 className="course-titel">{detailCourse.course_name} Lessons</h1>
-      {/* <img src={detailCourse.course_img} alt="" className="Details-img" /> */}
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/6vbgZnQrpbU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen className="video"></iframe>
       <ul className="list-container">
         {detailCourse.course_lessons && detailCourse.course_lessons.map((lesson, i) => {
-          return <li key={i}><Link to={`/course/${detailCourse._id}/lessons/${lesson.lesson_number}`} className="link-lessons"> {lesson.lesson_name}</Link></li>
+          return <li key={i}><Link to={`/course/${detailCourse._id}/lessons/${lesson.lesson_number}`} className="link-lessons"><a className="lesson-name">{lesson.lesson_name}</a></Link></li>
 
 
         })}

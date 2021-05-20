@@ -6,7 +6,7 @@ const ImproveSkills = () => {
         <div className="slider-page">
             <img className="slider-img" src="images/ImproveSkills.png" alt="intro" />
             <h2>Never stop learning!</h2>
-            <Link to="/courses"><button className="button-white">Get started</button></Link>
+            <Link to="/courses"><button className="button button-white">Get started</button></Link>
         </div>
     );
 }

@@ -20,7 +20,7 @@ const CourseDetails = (props) => {
     <div className="details">
       <Header />
       <h1>{detailCourse.course_name}</h1>
-      <img src={detailCourse.course_img} alt="" />
+      <img src={detailCourse.course_img} className="details-img" alt="" />
       <h2>About the course</h2>
       <p>{detailCourse.course_definition}</p>
       <h2>Duration</h2>

@@ -456,3 +456,124 @@ body {
         transform: translateX(-50%);
     }
 }
+
+.lessons-quiz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    ul {
+        display: flex;
+        gap: 25px;
+        margin-top: 50px;
+        margin-bottom: 25px;
+
+        a {
+            background:rgb(25, 133, 161);
+            width: 100px;
+            height: 40px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    h1 {
+        margin: 25px;
+    }
+
+    .text-wrapper {
+        margin-top: 25px;
+        width: 90vw;
+        max-width: 800px;
+        font-size: 24px;
+    }
+}
+
+.details {
+    .details-img {
+        width: 60vw;
+    }
+
+    text-align: center;;
+    line-height: 1.4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1, h2, p {
+        width: 90vw;
+    }
+
+    h1, h2 {
+        margin-top: 25px;
+    }
+}
+
+.lessons {
+    text-align: center;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        margin-top: 25px;
+        justify-content: center;
+        list-style-type: none;
+        padding-left: 0;
+        margin-left: 30px;
+
+        .lesson-name {
+            display: flex;
+            color: black;
+            margin: 25px;
+            width: 200px;
+            height: 40px;
+            border: 2px solid black;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .text-wrapper {
+            p {
+                margin-bottom: 25px;
+            }
+        }
+    }
+}
+
+.quiz {
+    text-align: center;
+
+    .answer-section {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        width: 100vw;
+        align-items: center;
+        margin-top: 20px;
+
+        button {
+            display: flex;
+            width: 250px;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+            background: rgb(25, 133, 161);
+            color: white;
+            border: none;
+        }
+    }
+}
+
+.courses-title {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+
+    h2 {
+        margin-bottom: 15px;
+        color: rgb(25, 133, 161);
+    }
+}
