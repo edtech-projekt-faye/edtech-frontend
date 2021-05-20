@@ -12,7 +12,7 @@ function SignUp() {
                     <input type="email" name="" id="email" className="field email-field" ref={emailRef} required placeholder="Email Address" />
                     <input type="password" name="" id="password" required className="field password-field" ref={passwordRef} required placeholder="Your Password" />
                     <input type="password" name="" id="passwordConfirm" required className="field password-field" ref={passwordConfirmRef} required placeholder="Confirm Password" />
-                    <button type="submit" className="button-white">Register</button>
+                    <button type="submit" className="button button-white">Register</button>
                 </form>
             </div>
         </div>

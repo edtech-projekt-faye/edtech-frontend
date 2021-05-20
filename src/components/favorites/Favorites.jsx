@@ -3,12 +3,12 @@ import { Link, useHistory } from 'react-router-dom'
 import MainContext from '../../context/MainContext'
 import './style.css'
 
-function Cards() {
+function Favorites() {
   const { courses } = useContext(MainContext)
   const history = useHistory()
   // console.log(courses);
   return (
-    <div className="cards-flex">
+    <div className="favorites cards-flex">
       {
         courses.map((course, i) => {
           return (
@@ -42,4 +42,4 @@ function Cards() {
   )
 }
 
-export default Cards
+export default Favorites

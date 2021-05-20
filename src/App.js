@@ -19,6 +19,8 @@ import Home from './pages/Home/Home.jsx';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Register from './pages/Register'
+import Profile from './pages/Profile'
+import Dashboard from './pages/Dashboard'
 
 
 function App() {
@@ -110,6 +112,8 @@ function App() {
             <Route path="/course/:id/lessons/:number/test" exact render={(props) => <LessonTests {...props} />} />
             <Route path="/courses" exact render={() => <Courses />} />
             <Route path="/register" render={() => <Register />} />
+            <Route path="/profile" render={() => <Profile />} />
+            <Route path="/dashboard" render={() => <Dashboard />} />
           </Switch>
         </BreakpointProvider>
       </div>
