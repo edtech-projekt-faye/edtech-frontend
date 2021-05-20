@@ -302,16 +302,157 @@ body {
     bottom: 25px;
 }
 
-.button-white {
+.button {
     padding: 10px 20px;
     font-size: 18px;
-    margin-top: 30px;
-    color: rgb(25, 133, 161);
-    background: white;
     border: none;
     border-radius: 10px;
+    cursor: pointer;
+}
+
+.button-white {
+    color: rgb(25, 133, 161);
+    background: white;
+}
+
+.button-blue {
+    color: white;
+    background: rgb(25, 133, 161);
 }
 
 .register-page {
     height: 80vh;
+}
+
+.profile {
+    position: relative;
+    
+    .profile-card {
+        width: 100vw;
+        max-width: 450px;
+        background: white;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin: auto;
+        position: relative;
+        top: 100px;
+
+        &__user-img {
+            width: 150px;
+            height: 150px;
+            
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+                margin: -75px 0 0px 0;
+                border: 3px solid rgb(25, 133, 161);
+            }
+        }
+
+        &__user-info {
+            margin-top: -60px;
+            text-align: center;
+
+            .label {
+                font-weight: 700;
+                margin-top: 25px;
+            }
+
+            .content {
+                font-size: 24px;
+            }
+
+            .change-info {
+                font-size: 12px;
+                margin-top: 15px;
+                margin-bottom: 15px;
+
+                a {
+                    color: rgb(25, 133, 161);
+                }
+            }
+        }
+
+        &__courses {
+            width: 100%;
+            text-align: center;
+            background: rgb(25, 133, 161);
+            border-radius: 0 0 10px 10px;
+            color: white;
+            margin-bottom: 90px;
+
+            .label {
+                font-weight: 700;
+                margin-top: 25px;
+            }
+
+            .content {
+                font-size: 24px;
+            }
+
+            button {
+                margin-top: 25px;
+                margin-bottom: 25px;
+            }
+        }
+    }
+}
+
+.favorites {
+
+    .card {
+        display: none;
+    }
+
+    .card:first-of-type {
+        display: block;
+    }
+
+    .card:nth-of-type(3) {
+        display: block;
+    }
+}
+
+.dashboard {
+    padding-bottom: 50px;
+
+    .greeting {
+        width: 90vw;
+        max-width: 450px;
+        margin: auto;
+
+        h2 {
+            margin: 15px 0;
+            span {
+                color:rgb(25, 133, 161);
+            }
+        }
+
+        p {
+            line-height: 1.4;
+        }
+    }
+
+    .title {
+        color: rgb(25, 133, 161);
+        text-align: center;
+        margin-top: 35px;
+    }
+
+    .not-started {
+        text-align: center;
+        margin-top: 25px;
+    }
+
+    button {
+        margin-top: 20px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }

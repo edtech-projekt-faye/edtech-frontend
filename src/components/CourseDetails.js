@@ -2,6 +2,8 @@ import { useEffect, useContext } from 'react'
 import axios from 'axios'
 import MainContext from '../context/MainContext'
 import { Link } from 'react-router-dom'
+import Header from '../components/header'
+
 const CourseDetails = (props) => {
 
   const { match } = props
@@ -14,15 +16,15 @@ const CourseDetails = (props) => {
       })
   }, [setDetailCourse, match.params.id])
   return (
-    <div>
-      <Link to="/courses">Home</Link>
+    <div className="details">
+      <Header />
       <h1>{detailCourse.course_name}</h1>
       <img src={detailCourse.course_img} alt="" />
       <h2>About the course</h2>
       <p>{detailCourse.course_definition}</p>
       <h2>Duration</h2>
       <p>{detailCourse.course_duration}</p>
-      <Link to={`/course/${detailCourse._id}/lessons`}><button className="get-started">Start</button></Link>
+      <Link to={`/course/${detailCourse._id}/lessons`}><button className="button button-blue">Start</button></Link>
     </div>
   );
 }
