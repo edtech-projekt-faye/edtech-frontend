@@ -1,7 +1,7 @@
 import './style.css';
 import Search from '../search'
 import React from 'react'
-import {Link, NavLink} from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 function Header() {
     return (
@@ -24,10 +24,13 @@ function Header() {
                     </Link>
                 </nav>
             </header>
-            <header className="mobile-header">
+
+            <header className="mobile-header" id="top">
                 <div className="mobile-header-container">
                     <div className="mobile-header-button">
-                        <img src="/search-solid.svg" alt="" />
+                        <Link to="/courses#top">
+                            <img src="/search-solid.svg" alt="" />
+                        </Link>
                     </div>
                     <div className="logo">
                         <Link to="/">

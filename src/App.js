@@ -22,7 +22,7 @@ function App() {
 
 
   useEffect(() => {
-    fetch('http://localhost:3500')
+    fetch('https://dry-fortress-33352.herokuapp.com')
       .then(response => response.json())
       .then(items => {
         // console.log(items);
