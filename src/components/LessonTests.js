@@ -8,7 +8,7 @@ const LessonTests = (props) => {
   const { match } = props
 
   useEffect(() => {
-    axios.get(`http://localhost:3500/course/${match.params.id}`)
+    axios.get(`https://dry-fortress-33352.herokuapp.com/course/${match.params.id}`)
       .then(item => {
         // console.log(item.data.course_lessons);
         setLesson(item.data.course_lessons.filter(lesson => lesson.lesson_number === match.params.number))
