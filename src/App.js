@@ -49,7 +49,7 @@ function App() {
 
   useEffect(() => {
     // fetch('http://localhost:3500/courses')
-    fetch('https://dry-fortress-33352.herokuapp.com')
+    fetch('https://dry-fortress-33352.herokuapp.com/courses')
       .then(response => response.json())
       .then(items => {
         setAllCourses(items)
