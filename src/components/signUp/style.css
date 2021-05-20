@@ -1,0 +1,42 @@
+.register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.register .register-card {
+  background: #1985a1;
+  padding: 10px;
+  width: 300px;
+  border-radius: 10px;
+}
+
+.register .register-card .register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+
+.register .register-card .register-form .field {
+  height: 40px;
+  width: 80vw;
+  max-width: 280px;
+  padding-left: 10px;
+  font-size: 18px;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  background: rgba(255, 255, 255, 0.7);
+  color: #1985a1;
+}
+
+.register .register-card .register-form .field:focus {
+  border-color: #1985a1;
+  background: white;
+  outline: none;
+}
+
+.register .register-card .register-form .field::placeholder {
+  color: #1985a1;
+}

@@ -18,6 +18,7 @@ import Home from './pages/Home/Home.jsx';
 // import BoardingPages from './boarding/BordingPages';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Register from './pages/Register'
 
 
 function App() {
@@ -48,7 +49,7 @@ function App() {
 
   useEffect(() => {
     // fetch('http://localhost:3500/courses')
-    fetch('https://dry-fortress-33352.herokuapp.com')
+    fetch('https://dry-fortress-33352.herokuapp.com/courses')
       .then(response => response.json())
       .then(items => {
         setAllCourses(items)
@@ -108,6 +109,7 @@ function App() {
             <Route path="/course/:id/lessons/:number" exact render={(props) => <DetailsLesson {...props} />} />
             <Route path="/course/:id/lessons/:number/test" exact render={(props) => <LessonTests {...props} />} />
             <Route path="/courses" exact render={() => <Courses />} />
+            <Route path="/register" render={() => <Register />} />
           </Switch>
         </BreakpointProvider>
       </div>
