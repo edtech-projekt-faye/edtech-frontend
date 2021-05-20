@@ -47,7 +47,8 @@ function App() {
   const [lesson, setLesson] = useState([])
 
   useEffect(() => {
-    fetch('http://localhost:3500/courses')
+    // fetch('http://localhost:3500/courses')
+    fetch('https://dry-fortress-33352.herokuapp.com')
       .then(response => response.json())
       .then(items => {
         setAllCourses(items)
