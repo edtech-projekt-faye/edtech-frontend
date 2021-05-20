@@ -1,5 +1,5 @@
-import Buttons from '../components/buttons';
-import {Link} from 'react-router-dom'
+// import Buttons from '../components/buttons';
+import { Link } from 'react-router-dom'
 
 const ImproveSkills = () => {
     return (

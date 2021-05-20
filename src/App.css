@@ -16,7 +16,7 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   border: 2px solid transparent;
-  transition: .2s;
+  transition: 0.2s;
   border-radius: 15px;
   background: rgba(0, 0, 0, 0.1);
 }
@@ -37,7 +37,7 @@ body {
 
 .desktop-header {
   height: 50px;
-  background: #1985A1;
+  background: #1985a1;
   width: 100vw;
   display: flex;
   align-items: center;
@@ -68,7 +68,7 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   border: 2px solid transparent;
-  transition: .2s;
+  transition: 0.2s;
   border-radius: 15px;
   background: rgba(255, 255, 255, 0.5);
 }
@@ -166,7 +166,7 @@ body {
   height: 50px;
   width: 75px;
   border-top: 4px solid transparent;
-  transition: .2s;
+  transition: 0.2s;
 }
 
 .mobile-header .mobile-header-container nav .link-mobile img {
@@ -311,4 +311,15 @@ body {
 
 .register-page {
   height: 80vh;
+}
+
+.answer-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.answer-section button {
+  padding: 10px;
+  margin-bottom: 20px;
 }
