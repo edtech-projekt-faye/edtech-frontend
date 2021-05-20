@@ -13,7 +13,7 @@ import LessonTests from './components/LessonTests'
 // import { GoogleLogout } from 'react-google-login';
 // import Login from './components/Login'
 import Courses from './pages/Courses';
-import { Breakpoint, BreakpointProvider } from 'react-socks'
+import { BreakpointProvider } from 'react-socks'
 import Home from './pages/Home/Home.jsx';
 // import BoardingPages from './boarding/BordingPages';
 import "slick-carousel/slick/slick.css";

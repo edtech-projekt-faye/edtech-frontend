@@ -16,15 +16,10 @@
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
-<<<<<<< HEAD
     "typescript": "^4.2.4",
     "react-socks": "^2.2.0",
-=======
->>>>>>> 471d281cfd01d4619ed5ab73405139bc118ab580
     "react-slick": "^0.28.1",
-    "react-socks": "^2.2.0",
     "slick-carousel": "^1.8.1",
-    "typescript": "^4.2.4",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
