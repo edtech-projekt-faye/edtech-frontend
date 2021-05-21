@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import MainContext from '../context/MainContext'
 import axios from 'axios'
 import Header from './header'
+import {Link} from 'react-router-dom'
 
 const LessonTests = (props) => {
   const [tests, setTests] = useState([])
@@ -32,37 +33,37 @@ const LessonTests = (props) => {
     {
       questionText: lessonQuestions[0].question,
       answerOptions: [
-        { answerText: lessonQuestions[0].answers.A, isCorrect: `${lessonQuestions[0].question.correct_answer === 'A' ? true : false}` },
-        { answerText: lessonQuestions[0].answers.B, isCorrect: `${lessonQuestions[0].question.correct_answer === 'B' ? true : false}` },
-        { answerText: lessonQuestions[0].answers.C, isCorrect: `${lessonQuestions[0].question.correct_answer === 'C' ? true : false}` },
-        { answerText: lessonQuestions[0].answers.D, isCorrect: `${lessonQuestions[0].question.correct_answer === 'D' ? true : false}` },
+        { answerText: lessonQuestions[0].answers.A, isCorrect: lessonQuestions[0].correct_answer === 'A' ? true : false },
+        { answerText: lessonQuestions[0].answers.B, isCorrect: lessonQuestions[0].correct_answer === 'B' ? true : false },
+        { answerText: lessonQuestions[0].answers.C, isCorrect: lessonQuestions[0].correct_answer === 'C' ? true : false },
+        { answerText: lessonQuestions[0].answers.D, isCorrect: lessonQuestions[0].correct_answer === 'D' ? true : false },
       ]
     },
     {
       questionText: lessonQuestions[1].question,
       answerOptions: [
-        { answerText: lessonQuestions[1].answers.A, isCorrect: `${lessonQuestions[1].question.correct_answer === 'A' ? true : false}` },
-        { answerText: lessonQuestions[1].answers.B, isCorrect: `${lessonQuestions[1].question.correct_answer === 'B' ? true : false}` },
-        { answerText: lessonQuestions[1].answers.C, isCorrect: `${lessonQuestions[1].question.correct_answer === 'C' ? true : false}` },
-        { answerText: lessonQuestions[1].answers.D, isCorrect: `${lessonQuestions[1].question.correct_answer === 'D' ? true : false}` },
+        { answerText: lessonQuestions[1].answers.A, isCorrect: lessonQuestions[1].correct_answer === 'A' ? true : false },
+        { answerText: lessonQuestions[1].answers.B, isCorrect: lessonQuestions[1].correct_answer === 'B' ? true : false },
+        { answerText: lessonQuestions[1].answers.C, isCorrect: lessonQuestions[1].correct_answer === 'C' ? true : false },
+        { answerText: lessonQuestions[1].answers.D, isCorrect: lessonQuestions[1].correct_answer === 'D' ? true : false },
       ]
     },
     {
-      questionText: 'What are variables used for in JavaScript?',
+      questionText: lessonQuestions[2].question,
       answerOptions: [
-        { answerText: 'For storing or holding data.', isCorrect: true },
-        { answerText: 'For changing language settings.', isCorrect: false },
-        { answerText: 'For storing or holding data.', isCorrect: false },
-        { answerText: 'For changing a value’s data type.', isCorrect: false },
+        { answerText: lessonQuestions[2].answers.A,  isCorrect: lessonQuestions[2].correct_answer === 'A' ? true : false },
+        { answerText: lessonQuestions[2].answers.B, isCorrect: lessonQuestions[2].correct_answer === 'B' ? true : false },
+        { answerText: lessonQuestions[2].answers.C, isCorrect: lessonQuestions[2].correct_answer === 'C' ? true : false },
+        { answerText: lessonQuestions[2].answers.D, isCorrect: lessonQuestions[2].correct_answer === 'D' ? true : false },
       ],
     },
     {
-      questionText: 'What is string concatenation?',
+      questionText: lessonQuestions[3].question,
       answerOptions: [
-        { answerText: 'When you change a variable’s value.', isCorrect: false },
-        { answerText: 'When you assign a string to a variable.', isCorrect: false },
-        { answerText: 'When you print a string to the console.', isCorrect: false },
-        { answerText: 'When you join strings together.', isCorrect: true },
+        { answerText: lessonQuestions[3].answers.A,  isCorrect: lessonQuestions[3].correct_answer === 'A' ? true : false },
+        { answerText: lessonQuestions[3].answers.B, isCorrect: lessonQuestions[3].correct_answer === 'B' ? true : false },
+        { answerText: lessonQuestions[3].answers.C, isCorrect: lessonQuestions[3].correct_answer === 'C' ? true : false },
+        { answerText: lessonQuestions[3].answers.D, isCorrect: lessonQuestions[3].correct_answer === 'D' ? true : false },
       ],
     },
   ];
@@ -85,9 +86,14 @@ const LessonTests = (props) => {
       <Header />
       <br />
       {showScore ? (
-        <div className='score-section'>
-          You scored {score} out of {questions.length}
-        </div>
+        <>
+          <div className='score-section'>
+            You scored {score} out of {questions.length}
+          </div>
+          <br />
+          <br />
+          <Link to={`/course/${detailCourse._id}/lessons`}><button className="button button-blue">Go Back</button></Link>
+        </>
       ) : (
         <>
           <div className='question-section'>

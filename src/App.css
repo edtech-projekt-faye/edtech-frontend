@@ -7,7 +7,7 @@
 
 body {
   margin-bottom: 70px;
-  background: #f1f1f1;
+  background: #fff;
 }
 
 #searchInput {
@@ -329,7 +329,6 @@ body {
   width: 100vw;
   max-width: 450px;
   background: white;
-  border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -364,7 +363,7 @@ body {
 }
 
 .profile .profile-card__user-info .content {
-  font-size: 24px;
+  font-size: 18px;
 }
 
 .profile .profile-card__user-info .change-info {
@@ -381,7 +380,6 @@ body {
   width: 100%;
   text-align: center;
   background: #1985a1;
-  border-radius: 0 0 10px 10px;
   color: white;
   margin-bottom: 90px;
 }
@@ -452,42 +450,7 @@ body {
   transform: translateX(-50%);
 }
 
-.lessons-quiz {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.lessons-quiz ul {
-  display: flex;
-  gap: 25px;
-  margin-top: 50px;
-  margin-bottom: 25px;
-}
-
-.lessons-quiz ul a {
-  background: #1985a1;
-  width: 100px;
-  height: 40px;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.lessons-quiz h1 {
-  margin: 25px;
-}
-
-.lessons-quiz .text-wrapper {
-  margin-top: 25px;
-  width: 90vw;
-  max-width: 800px;
-  font-size: 24px;
-}
-
 .details {
-  text-align: center;
   line-height: 1.4;
   display: flex;
   flex-direction: column;
@@ -495,45 +458,90 @@ body {
 }
 
 .details .details-img {
-  width: 60vw;
+  width: 100vw;
+  max-width: 800px;
+}
+
+.details h1 {
+  color: #1985a1;
 }
 
 .details h1, .details h2, .details p {
   width: 90vw;
 }
 
-.details h1, .details h2 {
+.details h1 {
   margin-top: 25px;
 }
 
-.lessons {
-  text-align: center;
+.details .about {
+  background: #1985a1;
+  border-radius: 10px;
+  margin: 15px 0;
+  color: white;
+  padding: 10px;
 }
 
-.lessons ul {
+.details .duration {
+  font-size: 10px;
+}
+
+.lessons-quiz {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  align-items: center;
+}
+
+.lessons-quiz h1 {
+  margin-top: 25px;
+  color: #1985a1;
+}
+
+.lessons-quiz ul {
+  display: flex;
+  gap: 5px;
   margin-top: 25px;
   justify-content: center;
   list-style-type: none;
   padding-left: 0;
-  margin-left: 30px;
+  font-size: 14px;
 }
 
-.lessons ul .lesson-name {
+.lessons-quiz ul a {
+  width: 70px;
+  height: 30px;
+  color: white;
   display: flex;
-  color: black;
-  margin: 25px;
-  width: 200px;
-  height: 40px;
-  border: 2px solid black;
   align-items: center;
   justify-content: center;
+  font-size: 14px;
 }
 
-.lessons ul .text-wrapper p {
+.lessons-quiz ul .lessons-link {
+  border-radius: 15px 0 0 15px;
+  background: #1985a1;
+}
+
+.lessons-quiz ul .quiz-link {
+  background: #1985a1;
+  border-radius: 0 15px 15px 0;
+}
+
+.lessons-quiz .text-wrapper {
+  margin-top: 25px;
+  width: 90vw;
+  max-width: 800px;
+  padding: 5px;
+}
+
+.lessons-quiz .text-wrapper .text_details h2 {
+  font-size: 22px;
   margin-bottom: 25px;
+}
+
+.lessons-quiz .text-wrapper .text_details p {
+  margin-bottom: 25px;
+  font-size: 18px;
 }
 
 .quiz {
@@ -558,6 +566,7 @@ body {
   background: #1985a1;
   color: white;
   border: none;
+  border-radius: 10px;
 }
 
 .courses-title {
@@ -569,4 +578,46 @@ body {
 .courses-title h2 {
   margin-bottom: 15px;
   color: #1985a1;
+}
+
+.lessons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+.lessons .wrapper {
+  width: 90vw;
+  text-align: left;
+}
+
+.lessons .wrapper h1 {
+  color: #1985a1;
+  margin-top: 25px;
+}
+
+.lessons .wrapper h2 {
+  margin: 25px 0;
+}
+
+.lessons .wrapper ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.lessons .wrapper ul a {
+  background: #1985a1;
+  display: flex;
+  color: white;
+  width: 150px;
+  height: 40px;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
 }

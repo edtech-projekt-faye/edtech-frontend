@@ -19,15 +19,18 @@ const CourseLessons = (props) => {
   return (
     <div className="lessons">
       <Header />
-      <h1 className="course-titel">{detailCourse.course_name} Lessons</h1>
-      <ul className="list-container">
+      <div className="wrapper">
+        <h1 className="course-titel">{detailCourse.course_name}</h1>
+        <h2>Available Lessons</h2>
+        <ul className="list-container">
         {detailCourse.course_lessons && detailCourse.course_lessons.map((lesson, i) => {
           return <li key={i}><Link to={`/course/${detailCourse._id}/lessons/${lesson.lesson_number}`} className="link-lessons"><a className="lesson-name">{lesson.lesson_name}</a></Link></li>
 
 
         })}
 
-      </ul>
+        </ul>
+      </div>
 
     </div>
   );

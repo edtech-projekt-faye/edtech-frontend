@@ -19,12 +19,16 @@ const CourseDetails = (props) => {
   return (
     <div className="details">
       <Header />
-      <h1>{detailCourse.course_name}</h1>
       <img src={detailCourse.course_img} className="details-img" alt="" />
-      <h2>About the course</h2>
-      <p>{detailCourse.course_definition}</p>
-      <h2>Duration</h2>
-      <p>{detailCourse.course_duration}</p>
+      <h1>{detailCourse.course_name}</h1>
+      <div className="about">
+        <h2>About the course</h2>
+        <p>{detailCourse.course_definition}</p>
+      </div>
+      <div className="duration">
+        <h2>Duration:</h2>
+        <p>{detailCourse.course_duration}</p>
+      </div>
       <Link to={`/course/${detailCourse._id}/lessons`}><button className="button button-blue">Start</button></Link>
     </div>
   );

@@ -13,7 +13,7 @@ function Cards() {
         courses.map((course, i) => {
           return (
             <div key={i} className="card">
-              <Link to={`/course/${course._id}`} onClick={() => history.push(`/book/${course._id}`)}>
+              <Link to={`/course/${course._id}`}>
                 <div className="card__image">
                   <img src={course.course_img} alt="" />
                 </div>
@@ -22,7 +22,7 @@ function Cards() {
                 <div className="time">
                   <p>{course.course_duration}</p>
                 </div>
-                <a className="course-title" href={`/course/${course._id}`} onClick={() => history.push(`/book/${course._id}`)}>
+                <a className="course-title" href={`/course/${course._id}`} onClick={() => history.push(`/course/${course._id}`)}>
                   <h2>{course.course_name}</h2>
                 </a>
                 <div className="course-intro">
@@ -31,7 +31,7 @@ function Cards() {
               </div>
               <div className="course-categories">
                 <div className="course-category">
-                  <p>Basics</p>
+                  <p>{course.course_category}</p>
                 </div>
               </div>
             </div>)

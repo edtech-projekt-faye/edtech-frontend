@@ -7,7 +7,7 @@
 
 body {
     margin-bottom: 70px;
-    background: #f1f1f1;
+    background: #fff;
 }
 
 #searchInput {
@@ -331,7 +331,6 @@ body {
         width: 100vw;
         max-width: 450px;
         background: white;
-        border-radius: 10px;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -364,7 +363,7 @@ body {
             }
 
             .content {
-                font-size: 24px;
+                font-size: 18px;
             }
 
             .change-info {
@@ -382,7 +381,6 @@ body {
             width: 100%;
             text-align: center;
             background: rgb(25, 133, 161);
-            border-radius: 0 0 10px 10px;
             color: white;
             margin-bottom: 90px;
 
@@ -457,87 +455,96 @@ body {
     }
 }
 
+.details {
+    .details-img {
+        width: 100vw;
+        max-width: 800px;
+    }
+
+    line-height: 1.4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        color: rgb(25, 133, 161);
+    }
+
+    h1, h2, p {
+        width: 90vw;
+    }
+
+    h1 {
+        margin-top: 25px;
+    }
+
+    .about {
+        background: rgb(25, 133, 161);
+        border-radius: 10px;
+        margin: 15px 0;
+        color: white;
+        padding: 10px;
+    }
+
+    .duration {
+        font-size: 10px;
+    }
+}
+
 .lessons-quiz {
     display: flex;
     flex-direction: column;
     align-items: center;
 
+    h1 {
+        margin-top: 25px;
+        color: rgb(25, 133, 161);
+    }
+
     ul {
         display: flex;
-        gap: 25px;
-        margin-top: 50px;
-        margin-bottom: 25px;
+        gap: 5px;
+        margin-top: 25px;
+        justify-content: center;
+        list-style-type: none;
+        padding-left: 0;
+        font-size: 14px;
 
         a {
-            background:rgb(25, 133, 161);
-            width: 100px;
-            height: 40px;
+            width: 70px;
+            height: 30px;
             color: white;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 14px;
         }
-    }
 
-    h1 {
-        margin: 25px;
+        .lessons-link {
+            border-radius: 15px 0 0 15px;
+            background: rgb(25, 133, 161);
+        }
+
+        .quiz-link {
+            background: rgb(25, 133, 161);
+            border-radius: 0 15px 15px 0;
+        }
     }
 
     .text-wrapper {
         margin-top: 25px;
         width: 90vw;
         max-width: 800px;
-        font-size: 24px;
-    }
-}
+        padding: 5px;
 
-.details {
-    .details-img {
-        width: 60vw;
-    }
-
-    text-align: center;;
-    line-height: 1.4;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    h1, h2, p {
-        width: 90vw;
-    }
-
-    h1, h2 {
-        margin-top: 25px;
-    }
-}
-
-.lessons {
-    text-align: center;
-
-    ul {
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-        margin-top: 25px;
-        justify-content: center;
-        list-style-type: none;
-        padding-left: 0;
-        margin-left: 30px;
-
-        .lesson-name {
-            display: flex;
-            color: black;
-            margin: 25px;
-            width: 200px;
-            height: 40px;
-            border: 2px solid black;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .text-wrapper {
+        .text_details {
+            h2 {
+                font-size: 22px;
+                margin-bottom: 25px;
+            }
             p {
                 margin-bottom: 25px;
+                font-size: 18px;
             }
         }
     }
@@ -563,6 +570,7 @@ body {
             background: rgb(25, 133, 161);
             color: white;
             border: none;
+            border-radius: 10px;
         }
     }
 }
@@ -575,5 +583,46 @@ body {
     h2 {
         margin-bottom: 15px;
         color: rgb(25, 133, 161);
+    }
+}
+
+.lessons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    .wrapper {
+        width: 90vw;
+        text-align: left;
+
+        h1 {
+            color: rgb(25, 133, 161);
+            margin-top: 25px;
+        }
+
+        h2 {
+            margin: 25px 0;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin-top: 25px;
+
+            a {
+                background:rgb(25, 133, 161);
+                display: flex;
+                color: white;
+                width: 150px;
+                height: 40px;
+                border-radius: 10px;
+                justify-content: center;
+                align-items: center;
+            }
+        }
     }
 }

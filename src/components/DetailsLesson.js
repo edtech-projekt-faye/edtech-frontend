@@ -26,34 +26,25 @@ const DetailsLesson = (props) => {
       {
         lesson &&
         lesson.map((les, key) => {
-          return <ul key={key}>
-            <Link to="#" className="hyper-lessons"><a>Lessons</a></Link>
-            <Link to={`/course/${detailCourse._id}/lessons/${les.lesson_number}/test`} className="hyper-Quiz"><a>Quiz</a></Link>
-          </ul>
+          return (
+          <>
+            <ul key={key}>
+              <Link to="#" className="hyper-lessons"><a className="lessons-link">Lessons</a></Link>
+              <Link to={`/course/${detailCourse._id}/lessons/${les.lesson_number}/test`} className="hyper-Quiz"><a className="quiz-link">Quiz</a></Link>
+            </ul>
+            <h1 className="lessons-detail-title">{les.lesson_name}</h1>
+            <div className="video">
+              {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/XzahodQSRbQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen className="video"></iframe> */}
+            </div>
+            <div className="text-wrapper">
+                <div className="text_details" dangerouslySetInnerHTML={{ __html: les.lesson_introduction }} />
+              <br />
+            </div>
+          </>
+          )
         })
-
-
       }
-
-      {lesson && lesson.map((les, i) => {
-        // return <h1 key={i} className="lessons-detail-title">{les.lesson_introduction}</h1>
-      })}
-      <h1 className="lessons-detail-title">Classes and IDs</h1>
-      <div className="video">
-        {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/XzahodQSRbQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen className="video"></iframe> */}
-      </div>
-      <div className="text-wrapper">
-        <p className="lessons-explination">CSS can select HTML elements by their type, class, and ID. CSS classes and IDs have different purposes,
-      which can affect which one you use to style HTML elements.</p>
-      <br />
-      <p>CSS classes are meant to be reused over many elements. By writing CSS classes, you can style elements in a variety of ways by mixing classes. For instance, imagine a page with two headlines. One headline needs to be bold and blue, and the other needs to be bold and green. Instead of other’s code, it’s better to write a .bold CSS rule, a .green CSS rule, and a .blue CSS rule. Then you can give one headline the bold green classes, and the other the bold blue classes.</p>
-      <br />
-      <p>While classes are meant to be used many times, an ID is meant to style only one element. As you’ll learn in the next exercise, IDs override the styles of types and classes. Since IDs override these styles, they should be used sparingly and only on elements that need to always appear the same.</p>
-      <br />
-      </div>
     </div>
-
   );
 }
-
 export default DetailsLesson;
