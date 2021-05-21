@@ -22,7 +22,7 @@ body {
 }
 
 #searchInput::placeholder {
-  color: #1985a1;
+  color: #777;
 }
 
 #searchInput:hover {
